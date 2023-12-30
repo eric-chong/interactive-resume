@@ -39,8 +39,6 @@ const logoHover = ref(false)
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/tokens.scss';
-
 .page-header {
   padding: 1rem;
   display: flex;
