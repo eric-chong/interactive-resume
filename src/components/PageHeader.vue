@@ -2,11 +2,11 @@
   <header class="page-header">
     <div class="page-header__logo" @mouseover="logoHover = true" @mouseleave="logoHover = false">
       <div v-if="!logoHover">
-        <h2 class="page-header__logo--name">cire</h2>
+        <h2 class="page-header__logo--name">Cire</h2>
         <div class="page-header__logo--sub">.reverse()</div>
       </div>
       <div v-if="logoHover">
-        <h2 class="page-header__logo--name">eric</h2>
+        <h2 class="page-header__logo--name">Eric</h2>
         <div class="page-header__logo--sub">chong</div>
       </div>
     </div>
@@ -54,17 +54,18 @@ const logoHover = ref(false)
 }
 .page-header__logo--name {
   color: rgb(var(--v-theme-text-color));
-  font-size: 24px;
-  font-family: Baskerville;
+  font-size: 30px;
+  font-family: Lato;
   line-height: 1;
   font-weight: 500;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 .page-header__logo--sub {
   color: rgb(var(--v-theme-text-color-darken-10));
   font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas,
     monospace;
   font-size: 12px;
+  line-height: 1;
 }
 
 .page-header__overview {
