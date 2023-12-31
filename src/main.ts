@@ -25,6 +25,7 @@ const vuetify = createVuetify({
         colors: {
           'text-color': '#f8f8f8',
           'text-color-darken-10': '#dedede',
+          'text-color-grey': '#cccccc',
           'border-light-1': '#3c3c3c4a',
           'border-light-2': '#3c3c3c1f'
         }
