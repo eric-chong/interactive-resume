@@ -29,11 +29,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useTheme } from 'vuetify'
 import { mdiGithub, mdiLinkedin } from '@mdi/js'
-
-const theme = useTheme()
-console.log('theme', theme.current)
 
 const logoHover = ref(false)
 </script>

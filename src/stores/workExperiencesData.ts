@@ -2,7 +2,8 @@ import { type WorkExperience } from '@/types'
 
 const workExperiencesData: WorkExperience[] = [
   {
-    company: 'Diligent Corporation, formerly Galvanize',
+    company: 'Galvanize, now Diligent',
+    location: 'Vancouver',
     icon: 'diligent',
     position: 'Senior Frontend Engineer - Frontend',
     start: '2012 Nov',
@@ -21,6 +22,7 @@ const workExperiencesData: WorkExperience[] = [
   },
   {
     company: 'Central 1 Credit Union',
+    location: 'Vancouver',
     icon: 'central1',
     position: 'Application Support Analyst and Software Developer',
     start: '2007 Jul',

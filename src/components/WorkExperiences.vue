@@ -8,15 +8,12 @@
       <div class="work-experience__icon">
         <CompanyLogo :company="workExperience.icon" />
       </div>
-      <div class="work-experience__details">
-        <div class="work-experience__position">{{ workExperience.position }}</div>
-        <div class="work-experience__company">{{ workExperience.company }}</div>
-        <ul>
-          <li v-for="(achievement, index) in workExperience.achievements" :key="index">
-            {{ achievement.description }}
-          </li>
-        </ul>
-      </div>
+
+      <ExperienceDetails
+        :company="workExperience.company"
+        :position="workExperience.position"
+        :achievements="workExperience.achievements"
+      />
     </div>
   </div>
 </template>
@@ -24,6 +21,7 @@
 <script setup lang="ts">
 import { useExperiencesStore } from '@/stores/useExperiencesStore'
 import CompanyLogo from './CompanyLogo.vue'
+import ExperienceDetails from './ExperienceDetails.vue'
 
 const { workExperiences } = useExperiencesStore()
 </script>
