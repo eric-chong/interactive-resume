@@ -52,10 +52,6 @@ $logo-height: 50px;
     top: $logo-top-position;
     left: $logo-left-position;
     position: absolute;
-    border: 1px solid rgb(var(--v-theme-border-light-1));
-    border-radius: 8px;
-    width: $logo-width;
-    height: $logo-height;
   }
 
   .work-experience__item:before {

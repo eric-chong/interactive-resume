@@ -31,7 +31,7 @@ const companyLogoImg = computed(() => (company ? companyLogoImgMap[company] : nu
   align-items: center;
   width: 50px;
   height: 50px;
-  border: 1px solid rgb(var(--v-theme-border-light-2));
+  border: 1px solid rgb(var(--v-theme-border-light-1));
   border-radius: 8px;
 }
 </style>
