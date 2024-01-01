@@ -1,4 +1,15 @@
 <template>
+  <div>
+    <v-checkbox-btn
+      v-for="(skill, index) in skills"
+      :label="skill"
+      :value="skill"
+      @click="toggleHighlightSkills(skill)"
+      :key="index"
+      density="compact"
+      inline
+    ></v-checkbox-btn>
+  </div>
   <div class="work-experiences">
     <div
       class="work-experience__item"
@@ -19,11 +30,29 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useExperiencesStore } from '@/stores/useExperiencesStore'
+import type { AllSkills } from '@/types/skills'
 import CompanyLogo from './CompanyLogo.vue'
 import ExperienceDetails from './ExperienceDetails.vue'
 
-const { workExperiences } = useExperiencesStore()
+const { highlightSkills, toggleHighlightSkills, workExperiences } = useExperiencesStore()
+
+const skills = computed(() => {
+  const skills: Array<AllSkills> = []
+
+  workExperiences.forEach((w) => {
+    w.achievements.forEach((a) => {
+      a.skills.forEach((k) => {
+        if (skills.indexOf(k) === -1) {
+          skills.push(k)
+        }
+      })
+    })
+  })
+
+  return skills
+})
 </script>
 
 <style lang="scss">
