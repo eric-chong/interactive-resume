@@ -1,8 +1,8 @@
 <template>
   <div class="work-experience-details">
-    <div class="work-experience-details__company">{{ company }}</div>
+    <h3 class="work-experience-details__company">{{ company }}</h3>
     <div class="work-experience-details__position">{{ position }}</div>
-    <ul>
+    <ul class="work-experience-details__achievements">
       <li v-for="(achievement, index) in achievements" :key="index">
         {{ achievement.description }}
       </li>
@@ -21,4 +21,14 @@ const { company, position, achievements } = defineProps({
 })
 </script>
 
-<style lang="scss"></style>
+<style scoped lang="scss">
+.work-experience-details__position {
+  font-size: 14px;
+  font-style: italic;
+}
+.work-experience-details__achievements {
+  margin-top: 16px;
+  margin-left: 16px;
+  font-size: 14px;
+}
+</style>

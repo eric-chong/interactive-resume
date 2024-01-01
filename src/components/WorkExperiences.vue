@@ -28,7 +28,6 @@ const { workExperiences } = useExperiencesStore()
 
 <style lang="scss">
 .work-experience__item {
-  margin-top: 2rem;
   display: flex;
   position: relative;
 }
@@ -46,7 +45,7 @@ $logo-height: 50px;
 @media (min-width: 1024px) {
   .work-experience__item {
     margin-top: 0;
-    padding: 0.4rem 20px 1rem 90px;
+    padding: 15px 20px 15px 90px;
   }
 
   .work-experience__icon {
