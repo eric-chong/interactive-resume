@@ -18,13 +18,23 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: 'light',
     themes: {
       dark: {
         dark: true,
         colors: {
           'text-color': '#f8f8f8',
           'text-color-darken-10': '#dedede',
+          'text-color-grey': '#cccccc',
+          'border-light-1': '#3c3c3c4a',
+          'border-light-2': '#3c3c3c1f'
+        }
+      },
+      light: {
+        dark: false,
+        colors: {
+          'text-color': '#3c3c3c',
+          'text-color-darken-10': '#222222',
           'text-color-grey': '#cccccc',
           'border-light-1': '#3c3c3c4a',
           'border-light-2': '#3c3c3c1f'
