@@ -57,8 +57,9 @@ function isAchievementMuted(achievement: WorkAchievement) {
 }
 .work-experience-details__achievement--highlighted {
   color: rgb(var(--v-theme-text-color-gold));
+  text-decoration: underline;
 }
 .work-experience-details__achievement--muted {
-  color: rgb(var(--v-theme-text-color-grey));
+  color: rgb(var(--v-theme-text-color-muted));
 }
 </style>
