@@ -1,11 +1,8 @@
-export type Frontend = 'react' | 'redux' | 'react router' | 'react query'
+import { Frontend, Backend, Language, Protocol, SoftSkill } from '@/enums'
 
-export type Backend = 'rails' | 'sql'
-
-export type Language = 'typescript' | 'java'
-
-export type Protocol = 'rest' | 'websocket'
-
-export type SoftSkills = 'problem solving' | 'collaboration'
-
-export type AllSkills = Frontend | Backend | Language | Protocol | SoftSkills
+export type AllSkills =
+  | keyof typeof Frontend
+  | keyof typeof Backend
+  | keyof typeof Language
+  | keyof typeof Protocol
+  | keyof typeof SoftSkill
