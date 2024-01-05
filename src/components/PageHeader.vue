@@ -1,14 +1,16 @@
 <template>
   <header class="page-header">
     <div class="page-header__logo" @mouseover="logoHover = true" @mouseleave="logoHover = false">
-      <div v-if="!logoHover">
-        <h2 class="page-header__logo--name">Cire</h2>
-        <div class="page-header__logo--sub">.reverse()</div>
-      </div>
-      <div v-if="logoHover">
-        <h2 class="page-header__logo--name">Eric</h2>
-        <div class="page-header__logo--sub">chong</div>
-      </div>
+      <Transition name="logo-fade">
+        <div class="page-header__logo-wrap" v-if="!logoHover" key="1">
+          <h2 class="page-header__logo--name">Cire</h2>
+          <div class="page-header__logo--sub">.reverse()</div>
+        </div>
+        <div class="page-header__logo-wrap" v-else key="2">
+          <h2 class="page-header__logo--name">Eric</h2>
+          <div class="page-header__logo--sub">chong</div>
+        </div>
+      </Transition>
     </div>
     <div class="page-header__overview">
       <div class="page-header__overview--links">
@@ -51,6 +53,18 @@ const logoHover = ref(false)
   &:hover {
     border-left: 2px solid rgb(var(--v-theme-primary));
   }
+}
+.page-header__logo-wrap {
+  position: absolute;
+}
+.logo-fade-enter-active,
+.logo-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.logo-fade-enter-from,
+.logo-fade-leave-to {
+  opacity: 0;
 }
 .page-header__logo--name {
   color: rgb(var(--v-theme-text-color));
