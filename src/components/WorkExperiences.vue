@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="false">
     <v-checkbox-btn
       v-for="(skill, index) in skills"
       :label="skill"
@@ -56,6 +56,9 @@ const skills = computed(() => {
 </script>
 
 <style lang="scss">
+.work-experiences {
+  margin: 16px 0;
+}
 .work-experience__item {
   display: flex;
   position: relative;
