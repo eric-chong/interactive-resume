@@ -29,7 +29,9 @@ const vuetify = createVuetify({
           'text-color-muted': '#aaaaaa',
           'text-color-gold': '#e6c200',
           'border-light-1': '#3c3c3c4a',
-          'border-light-2': '#3c3c3c1f'
+          'border-light-2': '#3c3c3c1f',
+          'background-red': '#b00020',
+          'background-orange': '#fb8c20'
         }
       },
       light: {
@@ -41,7 +43,9 @@ const vuetify = createVuetify({
           'text-color-muted': '#eeeeee',
           'text-color-gold': '#ccac00',
           'border-light-1': '#3c3c3c4a',
-          'border-light-2': '#3c3c3c1f'
+          'border-light-2': '#3c3c3c1f',
+          'background-red': '#b00020',
+          'background-orange': '#fb8c20'
         }
       }
     }
