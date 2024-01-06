@@ -1,15 +1,4 @@
 <template>
-  <div v-if="false">
-    <v-checkbox-btn
-      v-for="(skill, index) in skills"
-      :label="skill"
-      :value="skill"
-      @click="toggleHighlightSkills(skill)"
-      :key="index"
-      density="compact"
-      inline
-    ></v-checkbox-btn>
-  </div>
   <div class="work-experiences">
     <div
       class="work-experience__item"
