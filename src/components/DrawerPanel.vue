@@ -3,7 +3,7 @@
     <div class="drawer-pane__wrapper" :class="{ opened: isOpen }">
       <div class="drawer-panel__toggle-icons">
         <v-icon :icon="mdiFormatColorHighlight" @click="toggleDrawer('highlight')" />
-        <v-icon :icon="mdiChartBubble" @click="toggleDrawer('chart')" />
+        <v-icon v-if="false" :icon="mdiChartBubble" @click="toggleDrawer('chart')" />
       </div>
       <div class="drawer-panel__content">
         <h4 class="drawer-panel__content-header">
