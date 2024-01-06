@@ -2,8 +2,17 @@
   <div class="drawer-panel">
     <div class="drawer-pane__wrapper" :class="{ opened: isOpen }">
       <div class="drawer-panel__toggle-icons">
-        <v-icon :icon="mdiFormatColorHighlight" @click="toggleDrawer('highlight')" />
-        <v-icon v-if="false" :icon="mdiChartBubble" @click="toggleDrawer('chart')" />
+        <v-icon
+          class="drawer-panel__toggle-highlight"
+          :icon="mdiFormatColorHighlight"
+          @click="toggleDrawer('highlight')"
+        />
+        <v-icon
+          v-if="false"
+          class="drawer-panel__toggle-bubble"
+          :icon="mdiChartBubble"
+          @click="toggleDrawer('chart')"
+        />
       </div>
       <div class="drawer-panel__content">
         <h4 class="drawer-panel__content-header">
@@ -64,13 +73,17 @@ const toggleDrawer = (name: string) => {
     border-left: 1px solid rgb(var(--v-theme-border-light-2));
     border-top: 1px solid rgb(var(--v-theme-border-light-2));
     border-bottom: 1px solid rgb(var(--v-theme-border-light-2));
+    &.drawer-panel__toggle-highlight {
+      background: rgb(var(--v-theme-background-red));
+    }
+    &.drawer-panel__toggle-bubble {
+      background: rgb(var(--v-theme-background-orange));
+    }
     &:first-of-type {
       border-top-left-radius: 4px;
-      background: rgb(var(--v-theme-background-red));
     }
     &:last-of-type {
       border-bottom-left-radius: 4px;
-      background: rgb(var(--v-theme-background-orange));
     }
   }
 }
