@@ -6,8 +6,14 @@
         <v-icon :icon="mdiChartBubble" @click="toggleDrawer('chart')" />
       </div>
       <div class="drawer-panel__content">
-        <div v-if="drawerName === 'highlight'">Highlighter</div>
-        <div v-if="drawerName === 'chart'">Bubble chart</div>
+        <h4 class="drawer-panel__content-header">
+          {{ drawerName === 'highlight' ? 'Select skills' : 'Skills Bubble' }}
+        </h4>
+        <v-divider />
+        <div class="drawer-panel__content-body">
+          <SkillsSelector v-if="drawerName === 'highlight'" />
+          <div v-if="drawerName === 'chart'">Bubble chart</div>
+        </div>
       </div>
     </div>
   </div>
@@ -16,6 +22,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { mdiFormatColorHighlight, mdiChartBubble } from '@mdi/js'
+import SkillsSelector from './SkillsSelector.vue'
 
 const isOpen = ref(false)
 const drawerName = ref('highlight')
@@ -39,7 +46,7 @@ const toggleDrawer = (name: string) => {
 }
 .drawer-pane__wrapper {
   display: flex;
-  right: -200px;
+  right: -250px;
   position: relative;
   transition: right 0.5s cubic-bezier(0.82, 0.085, 0.395, 0.895);
   &.opened {
@@ -47,7 +54,7 @@ const toggleDrawer = (name: string) => {
   }
 }
 .drawer-panel__toggle-icons {
-  padding-top: 16px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   i {
@@ -70,6 +77,15 @@ const toggleDrawer = (name: string) => {
 .drawer-panel__content {
   background: rgb(var(--v-theme-surface));
   border-left: 1px solid rgb(var(--v-theme-border-light-2));
-  width: 200px;
+  width: 250px;
+}
+.drawer-panel__content-header {
+  font-size: 16px;
+  padding: 8px 16px;
+  height: 40px;
+}
+.drawer-panel__content-body {
+  height: calc(100% - 41px);
+  overflow: auto;
 }
 </style>

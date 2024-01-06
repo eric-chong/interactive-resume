@@ -33,3 +33,11 @@ export enum SkillCategory {
   Protocol = 'Protocol',
   SoftSkill = 'SoftSkill'
 }
+
+export const SkillsMap = {
+  Frontend,
+  Backend,
+  Language,
+  Protocol,
+  SoftSkill
+}
