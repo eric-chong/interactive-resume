@@ -5,7 +5,7 @@ import PageHeader from './components/PageHeader.vue'
 </script>
 
 <template>
-  <v-sheet :width="800">
+  <v-sheet class="main-content" :width="800">
     <PageHeader />
 
     <v-tabs class="navigation-tabs" color="primary" density="compact">
@@ -18,6 +18,9 @@ import PageHeader from './components/PageHeader.vue'
 </template>
 
 <style scoped>
+.main-content {
+  min-height: 500px;
+}
 .navigation-tabs {
   border-bottom: 1px solid rgb(var(--v-theme-border-light-2));
 }
