@@ -67,8 +67,8 @@ const toggleDrawer = (name: string) => {
   display: flex;
   flex-direction: column;
   i {
-    padding: 8px;
-    width: 40px;
+    padding: 8px 2px;
+    width: 26px;
     height: 40px;
     border-left: 1px solid rgb(var(--v-theme-border-light-2));
     border-top: 1px solid rgb(var(--v-theme-border-light-2));
