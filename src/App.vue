@@ -20,6 +20,8 @@ import PageHeader from './components/PageHeader.vue'
 <style scoped>
 .main-content {
   min-height: 500px;
+  border: 1px solid rgb(var(--v-theme-border-light-2));
+  border-radius: 8px;
 }
 .navigation-tabs {
   border-bottom: 1px solid rgb(var(--v-theme-border-light-2));

@@ -39,6 +39,7 @@ const logoHover = ref(false)
 <style lang="scss" scoped>
 .page-header {
   padding: 1rem;
+  padding-bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

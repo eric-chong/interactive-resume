@@ -16,7 +16,7 @@ export enum Language {
   Java = 'Java'
 }
 
-export enum Protocol {
+export enum Api {
   Rest = 'Rest',
   Websocket = 'Websocket'
 }
@@ -31,7 +31,7 @@ export enum SkillCategory {
   Frontend = 'Frontend',
   Backend = 'Backend',
   Language = 'Language',
-  Protocol = 'Protocol',
+  Api = 'Api',
   SoftSkill = 'SoftSkill'
 }
 
@@ -39,6 +39,6 @@ export const SkillsMap = {
   Frontend,
   Backend,
   Language,
-  Protocol,
+  Api,
   SoftSkill
 }

@@ -18,7 +18,6 @@
         <h4 class="drawer-panel__content-header">
           {{ drawerName === 'highlight' ? 'Select skills' : 'Skills Bubble' }}
         </h4>
-        <v-divider />
         <div class="drawer-panel__content-body">
           <SkillsSelector v-if="drawerName === 'highlight'" />
           <div v-if="drawerName === 'chart'">Bubble chart</div>
@@ -67,6 +66,7 @@ const toggleDrawer = (name: string) => {
   display: flex;
   flex-direction: column;
   i {
+    color: rgb(var(--v-theme-text-color-white));
     padding: 8px 2px;
     width: 26px;
     height: 40px;
@@ -93,6 +93,7 @@ const toggleDrawer = (name: string) => {
   width: 250px;
 }
 .drawer-panel__content-header {
+  border-bottom: 1px solid rgb(var(--v-theme-border-light-2));
   font-size: 16px;
   padding: 8px 16px;
   height: 40px;

@@ -1,5 +1,5 @@
 import type { AllSkills } from '@/types/skills'
-import { Frontend, Backend, Language, Protocol, SoftSkill } from '@/enums'
+import { Frontend, Backend, Language, Api, SoftSkill } from '@/enums'
 
 export const getSkillDisplayName = (skill: AllSkills): string => {
   const displayNamesMap = new Map<AllSkills, string>([
@@ -9,10 +9,11 @@ export const getSkillDisplayName = (skill: AllSkills): string => {
     [Frontend.ReactQuery, 'React Query'],
     [Backend.Rails, 'Ruby on Rails'],
     [Backend.Sql, 'SQL'],
+    [Language.Javascript, 'Javascript'],
     [Language.Typescript, 'Typescript'],
     [Language.Java, 'Java'],
-    [Protocol.Rest, 'REST'],
-    [Protocol.Websocket, 'Websocket'],
+    [Api.Rest, 'REST'],
+    [Api.Websocket, 'Websocket'],
     [SoftSkill.ProblemSolving, 'Problem Solving'],
     [SoftSkill.Collaboration, 'Collaboration'],
     [SoftSkill.Support, 'Support']

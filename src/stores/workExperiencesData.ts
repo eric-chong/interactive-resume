@@ -11,12 +11,12 @@ const workExperiencesData: WorkExperience[] = [
       {
         description:
           'Develop python script editor single page application with React typescript, and uses websocket message to have real time communication with backend script execution environment.',
-        skills: ['React', 'Redux', 'Websocket', 'Typescript']
+        skills: ['React', 'Redux', 'Websocket', 'Typescript', 'Rest']
       },
       {
         description:
           'Develop Analytic Robot single page application with React and other frontend libraries such as react router, redux toolkits, react query etc.',
-        skills: ['React', 'ReactRouter', 'Redux', 'ReactQuery', 'Javascript']
+        skills: ['React', 'ReactRouter', 'Redux', 'ReactQuery', 'Javascript', 'Rest']
       }
     ]
   },
