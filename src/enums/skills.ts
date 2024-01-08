@@ -1,8 +1,8 @@
 export enum Frontend {
   React = 'React',
-  Redux = 'Redux',
+  ReactQuery = 'ReactQuery',
   ReactRouter = 'ReactRouter',
-  ReactQuery = 'ReactQuery'
+  Redux = 'Redux'
 }
 
 export enum Backend {
@@ -11,6 +11,7 @@ export enum Backend {
 }
 
 export enum Language {
+  Javascript = 'Javascript',
   Typescript = 'Typescript',
   Java = 'Java'
 }
@@ -21,8 +22,8 @@ export enum Protocol {
 }
 
 export enum SoftSkill {
-  ProblemSolving = 'ProblemSolving',
   Collaboration = 'Collaboration',
+  ProblemSolving = 'ProblemSolving',
   Support = 'Support'
 }
 

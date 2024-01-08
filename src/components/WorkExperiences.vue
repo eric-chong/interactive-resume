@@ -12,6 +12,8 @@
       <ExperienceDetails
         :company="workExperience.company"
         :position="workExperience.position"
+        :start="workExperience.start"
+        :end="workExperience.end"
         :achievements="workExperience.achievements"
       />
     </div>

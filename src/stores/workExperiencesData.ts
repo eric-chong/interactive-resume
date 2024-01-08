@@ -5,7 +5,7 @@ const workExperiencesData: WorkExperience[] = [
     company: 'Galvanize, now Diligent',
     location: 'Vancouver',
     icon: 'diligent',
-    position: 'Senior Frontend Engineer - Frontend',
+    position: 'Senior Software Engineer - Frontend',
     start: '2012 Nov',
     achievements: [
       {
@@ -16,7 +16,7 @@ const workExperiencesData: WorkExperience[] = [
       {
         description:
           'Develop Analytic Robot single page application with React and other frontend libraries such as react router, redux toolkits, react query etc.',
-        skills: ['React', 'ReactRouter', 'Redux', 'ReactQuery']
+        skills: ['React', 'ReactRouter', 'Redux', 'ReactQuery', 'Javascript']
       }
     ]
   },

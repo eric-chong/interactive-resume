@@ -1,7 +1,10 @@
 <template>
   <div class="work-experience-details">
     <h3 class="work-experience-details__company">{{ company }}</h3>
-    <div class="work-experience-details__position">{{ position }}</div>
+    <div class="work-experience-details__position">
+      <div class="work-experience-details__title">{{ position }}</div>
+      <div class="work-experience-details__period">({{ start }} ~ {{ end || 'PRESENT' }})</div>
+    </div>
     <ul class="work-experience-details__achievements">
       <li
         v-for="(achievement, index) in achievements"
@@ -23,9 +26,11 @@ import { defineProps } from 'vue'
 import { useExperiencesStore } from '@/stores/useExperiencesStore'
 import type { WorkAchievement } from '@/types'
 
-const { company, position, achievements } = defineProps({
+const { company, position, achievements, start, end } = defineProps({
   company: String,
   position: String,
+  start: String,
+  end: String,
   achievements: Array<WorkAchievement>
 })
 
@@ -47,8 +52,17 @@ function isAchievementMuted(achievement: WorkAchievement) {
 
 <style scoped lang="scss">
 .work-experience-details__position {
+  display: flex;
+  gap: 8px;
+}
+.work-experience-details__title {
   font-size: 14px;
   font-style: italic;
+}
+.work-experience-details__period {
+  font-size: 13px;
+  font-style: italic;
+  color: rgb(var(--v-theme-text-color-grey));
 }
 .work-experience-details__achievements {
   margin-top: 16px;
