@@ -1,4 +1,4 @@
-import { type WorkAchievement } from './WorkAchievement'
+import { type Achievement } from './Achievement'
 
 export type WorkExperience = {
   company: string
@@ -7,5 +7,5 @@ export type WorkExperience = {
   position: string
   start: string
   end?: string
-  achievements: Array<WorkAchievement>
+  achievements: Array<Achievement>
 }

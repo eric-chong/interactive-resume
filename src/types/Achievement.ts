@@ -1,6 +1,6 @@
 import { type AllSkills } from './skills'
 
-export type WorkAchievement = {
+export type Achievement = {
   description: string
-  skills: Array<AllSkills>
+  skills?: Array<AllSkills>
 }

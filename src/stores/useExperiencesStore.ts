@@ -1,11 +1,11 @@
-import { ref } from 'vue'
-import type { Ref } from 'vue'
+import { ref, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import workExperiencesData from './workExperiencesData'
 import type { AllSkills } from '@/types/skills'
+import type { WorkExperience } from '@/types'
 
 export const useExperiencesStore = defineStore('workExperiences', () => {
-  const workExperiences = ref(workExperiencesData)
+  const workExperiences: Ref<Array<WorkExperience>> = ref(workExperiencesData)
   const highlightSkills: Ref<Array<AllSkills>> = ref([])
 
   function toggleHighlightSkills(skill: AllSkills) {

@@ -1,11 +1,17 @@
 <template>
-  <div class="projects-view">Projects page coming soon</div>
+  <div class="projects-view">
+    <DrawerPanel />
+    <PersonalProjects />
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PersonalProjects from '@/components/PersonalProjects.vue'
+import DrawerPanel from '@/components/DrawerPanel.vue'
+</script>
 
 <style scoped lang="scss">
 .projects-view {
-  padding: 16px;
+  position: relative;
 }
 </style>

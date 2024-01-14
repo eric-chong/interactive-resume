@@ -1,2 +1,2 @@
 export type { WorkExperience } from './WorkExperience'
-export type { WorkAchievement } from './WorkAchievement'
+export type { Achievement } from './Achievement'

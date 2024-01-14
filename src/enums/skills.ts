@@ -1,19 +1,26 @@
 export enum Frontend {
+  Angular = 'Angular',
+  Pinia = 'Pinia',
   React = 'React',
   ReactQuery = 'ReactQuery',
   ReactRouter = 'ReactRouter',
-  Redux = 'Redux'
+  Redux = 'Redux',
+  Vue = 'Vue',
+  Vuetify = 'Vuetify'
 }
 
 export enum Backend {
+  Express = 'Express',
+  MongoDb = 'MongoDb',
+  Mongoose = 'Mongoose',
   Rails = 'Rails',
   Sql = 'Sql'
 }
 
 export enum Language {
+  Java = 'Java',
   Javascript = 'Javascript',
-  Typescript = 'Typescript',
-  Java = 'Java'
+  Typescript = 'Typescript'
 }
 
 export enum Api {

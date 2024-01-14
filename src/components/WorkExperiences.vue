@@ -1,88 +1,34 @@
 <template>
   <div class="work-experiences">
-    <div
-      class="work-experience__item"
+    <InfoRow
       v-for="(workExperience, index) in workExperiences"
       :key="index"
+      :listItems="workExperience.achievements"
     >
-      <div class="work-experience__icon">
+      <template v-slot:icon>
         <CompanyLogo :company="workExperience.icon" />
-      </div>
-
-      <ExperienceDetails
-        :company="workExperience.company"
-        :position="workExperience.position"
-        :start="workExperience.start"
-        :end="workExperience.end"
-        :achievements="workExperience.achievements"
-      />
-    </div>
+      </template>
+      <template v-slot:title>
+        {{ workExperience.company }}
+      </template>
+      <template v-slot:subtitle>
+        {{ workExperience.position }}
+      </template>
+      <template v-slot:period>
+        ({{ workExperience.start }} ~ {{ workExperience.end || 'PRESENT' }})
+      </template>
+    </InfoRow>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useExperiencesStore } from '@/stores/useExperiencesStore'
+import workExperiences from '@/stores/workExperiencesData'
 import CompanyLogo from './CompanyLogo.vue'
-import ExperienceDetails from './ExperienceDetails.vue'
-
-const { workExperiences } = useExperiencesStore()
+import InfoRow from './InfoRow.vue'
 </script>
 
 <style lang="scss">
 .work-experiences {
   padding: 16px 0;
-}
-.work-experience__item {
-  display: flex;
-  position: relative;
-}
-
-.work-experience__details {
-  flex: 1;
-  margin-left: 1rem;
-}
-
-$logo-top-position: 15px;
-$logo-left-position: 25px;
-$logo-width: 50px;
-$logo-height: 50px;
-
-@media (min-width: 1024px) {
-  .work-experience__item {
-    margin-top: 0;
-    padding: 15px 20px 15px 90px;
-  }
-
-  .work-experience__icon {
-    top: $logo-top-position;
-    left: $logo-left-position;
-    position: absolute;
-  }
-
-  .work-experience__item:before {
-    content: ' ';
-    border-left: 1px solid rgb(var(--v-theme-border-light-1));
-    position: absolute;
-    left: $logo-left-position + ($logo-width / 2);
-    top: 0;
-    height: $logo-top-position;
-  }
-
-  .work-experience__item:after {
-    content: ' ';
-    border-left: 1px solid rgb(var(--v-theme-border-light-1));
-    position: absolute;
-    left: $logo-left-position + ($logo-width / 2);
-    top: $logo-top-position + $logo-height;
-    height: calc(100% - $logo-top-position - $logo-height);
-  }
-
-  .work-experience__item:first-of-type:before {
-    display: none;
-  }
-
-  .work-experience__item:last-of-type:after {
-    display: none;
-  }
 }
 </style>
