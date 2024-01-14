@@ -6,7 +6,7 @@
       :listItems="workExperience.achievements"
     >
       <template v-slot:icon>
-        <CompanyLogo :company="workExperience.icon" />
+        <RowIcon :iconKey="workExperience.icon" />
       </template>
       <template v-slot:title>
         {{ workExperience.company }}
@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import workExperiences from '@/stores/workExperiencesData'
-import CompanyLogo from './CompanyLogo.vue'
+import RowIcon from './RowIcon.vue'
 import InfoRow from './InfoRow.vue'
 </script>
 

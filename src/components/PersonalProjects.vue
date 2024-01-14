@@ -2,7 +2,7 @@
   <div class="personal-projects">
     <InfoRow v-for="(project, index) in projects" :key="index" :listItems="project.highlights">
       <template v-slot:icon>
-        <CompanyLogo :company="'dummy'" />
+        <RowIcon :iconKey="project.icon" />
       </template>
       <template v-slot:title>
         {{ project.title }}
@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import projects from '@/stores/projectsData'
-import CompanyLogo from './CompanyLogo.vue'
+import RowIcon from './RowIcon.vue'
 import InfoRow from './InfoRow.vue'
 </script>
 

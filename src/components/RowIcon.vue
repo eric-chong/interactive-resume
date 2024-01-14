@@ -1,8 +1,8 @@
 <template>
-  <div class="company-logo">
-    <img v-if="companyLogoImg" :src="companyLogoImg" />
+  <div class="row-icon">
+    <img v-if="iconImg" :src="iconImg" />
     <v-icon
-      v-if="!companyLogoImg"
+      v-if="!iconImg"
       :icon="mdiBriefcaseVariantOutline"
       size="large"
       color="text-color-grey"
@@ -14,18 +14,22 @@
 import { computed, defineProps } from 'vue'
 import diligentImg from '@/assets/companyLogos/diligent.png'
 import central1Img from '@/assets/companyLogos/central1.png'
+import meanjsImg from '@/assets/logoIcons/meanjs.png'
+import vueSvg from '@/assets/logoIcons/vue.svg'
 import { mdiBriefcaseVariantOutline } from '@mdi/js'
 
-const { company } = defineProps({ company: String })
-const companyLogoImgMap: Record<string, any> = {
+const { iconKey } = defineProps({ iconKey: String })
+const imgMap: Record<string, any> = {
   central1: central1Img,
-  diligent: diligentImg
+  diligent: diligentImg,
+  meanjs: meanjsImg,
+  vue: vueSvg
 }
-const companyLogoImg = computed(() => (company ? companyLogoImgMap[company] : null))
+const iconImg = computed(() => (iconKey ? imgMap[iconKey] : null))
 </script>
 
 <style scoped lang="scss">
-.company-logo {
+.row-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,5 +37,10 @@ const companyLogoImg = computed(() => (company ? companyLogoImgMap[company] : nu
   height: 50px;
   border: 1px solid rgb(var(--v-theme-border-light-1));
   border-radius: 8px;
+
+  img {
+    width: 26px;
+    height: 26px;
+  }
 }
 </style>
