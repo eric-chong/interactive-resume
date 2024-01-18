@@ -36,10 +36,10 @@ import { defineProps } from 'vue'
 import { useExperiencesStore } from '@/stores/useExperiencesStore'
 import type { Achievement } from '@/types'
 
-const { listItems, isRowHighlighted } = defineProps<{
-  listItems: Array<Achievement>
-  isRowHighlighted: boolean
-}>()
+const { listItems, isRowHighlighted } = defineProps({
+  listItems: Array<Achievement>,
+  isRowHighlighted: Boolean
+})
 
 const { highlightSkills } = useExperiencesStore()
 
