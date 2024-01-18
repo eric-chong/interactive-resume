@@ -3,7 +3,12 @@
     <div class="info-row__icon">
       <slot name="icon"></slot>
     </div>
-    <div class="info-row__details">
+    <div
+      class="info-row__details"
+      :class="{
+        highlighted: isRowHighlighted
+      }"
+    >
       <h3 class="info-row__details--title"><slot name="title"></slot></h3>
       <div class="info-row__details--subtitle">
         <div class="info-row__details--subtitle-text"><slot name="subtitle"></slot></div>
@@ -31,9 +36,10 @@ import { defineProps } from 'vue'
 import { useExperiencesStore } from '@/stores/useExperiencesStore'
 import type { Achievement } from '@/types'
 
-const { listItems } = defineProps({
+const { listItems, isRowHighlighted } = defineProps<{
   listItems: Array<Achievement>
-})
+  isRowHighlighted: boolean
+}>()
 
 const { highlightSkills } = useExperiencesStore()
 
@@ -46,6 +52,7 @@ function isItemHighlighted(achievement: Achievement) {
 }
 
 function isItemMuted(achievement: Achievement) {
+  if (!achievement.skills) return false
   const isHighlighted = isItemHighlighted(achievement)
   return highlightSkills.length > 0 && !isHighlighted
 }
@@ -95,7 +102,9 @@ $logo-height: 50px;
 .info-row:last-of-type:after {
   display: none;
 }
-
+.info-row__details.highlighted {
+  color: rgb(var(--v-theme-primary));
+}
 .info-row__details--subtitle {
   display: flex;
   gap: 8px;
@@ -107,18 +116,26 @@ $logo-height: 50px;
 .info-row__details--period {
   font-size: 13px;
   font-style: italic;
-  color: rgb(var(--v-theme-text-color-grey));
+}
+.info-row__details {
+  &:not(.highlighted) {
+    .info-row__details--period {
+      color: rgb(var(--v-theme-text-color-grey));
+    }
+
+    .info-row__details--list-items {
+      li.highlighted {
+        color: rgb(var(--v-theme-primary));
+      }
+      li.muted {
+        color: rgb(var(--v-theme-text-color-muted));
+      }
+    }
+  }
 }
 .info-row__details--list-items {
   margin-top: 16px;
   margin-left: 16px;
   font-size: 14px;
-
-  li.highlighted {
-    color: rgb(var(--v-theme-primary));
-  }
-  li.muted {
-    color: rgb(var(--v-theme-text-color-muted));
-  }
 }
 </style>
