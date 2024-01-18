@@ -1,12 +1,19 @@
 export enum Frontend {
   Angular = 'Angular',
+  Cypress = 'Cypress',
+  Jest = 'Jest',
+  Enzyme = 'Enzyme',
   Pinia = 'Pinia',
   React = 'React',
   ReactQuery = 'ReactQuery',
   ReactRouter = 'ReactRouter',
+  ReactTestingLibrary = 'ReactTestingLibrary',
   Redux = 'Redux',
+  Storybook = 'Storybook',
+  Screener = 'Screener',
   Vue = 'Vue',
-  Vuetify = 'Vuetify'
+  Vuetify = 'Vuetify',
+  DataVisualization = 'DataVisualization'
 }
 
 export enum Backend {
@@ -14,7 +21,9 @@ export enum Backend {
   MongoDb = 'MongoDb',
   Mongoose = 'Mongoose',
   Rails = 'Rails',
-  Sql = 'Sql'
+  Sql = 'Sql',
+  Jersey = 'Jersey',
+  Hibernate = 'Hibernate'
 }
 
 export enum Language {
@@ -25,13 +34,15 @@ export enum Language {
 
 export enum Api {
   Rest = 'Rest',
-  Websocket = 'Websocket'
+  Websocket = 'Websocket',
+  GraphQL = 'GraphQL'
 }
 
 export enum SoftSkill {
   Collaboration = 'Collaboration',
   ProblemSolving = 'ProblemSolving',
-  Support = 'Support'
+  Support = 'Support',
+  Mentoring = 'Mentoring'
 }
 
 export enum SkillCategory {
