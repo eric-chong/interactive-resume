@@ -15,6 +15,7 @@ export const getSkillDisplayName = (skill: AllSkills): string => {
     [Frontend.Redux, 'Redux'],
     [Frontend.Screener, 'Screener'],
     [Frontend.Storybook, 'Storybook'],
+    [Frontend.MicroFrontend, 'Micro Frontend'],
     [Frontend.Vue, 'Vue'],
     [Frontend.Vuetify, 'Vuetify'],
     [Frontend.DataVisualization, 'Data Visualization'],

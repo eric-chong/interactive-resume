@@ -7,6 +7,7 @@ export enum Frontend {
   React = 'React',
   ReactQuery = 'ReactQuery',
   ReactRouter = 'ReactRouter',
+  MicroFrontend = 'MicroFrontend',
   ReactTestingLibrary = 'ReactTestingLibrary',
   Redux = 'Redux',
   Storybook = 'Storybook',

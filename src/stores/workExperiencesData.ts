@@ -10,51 +10,57 @@ const workExperiencesData: WorkExperience[] = [
     achievements: [
       {
         description:
-          'Develop python script editor single page application with React typescript, and uses websocket message to have real time communication with backend script execution environment.',
+          'Spearheaded the research and implementation of micro frontend architecture for an AI chat assistant component utilizing React and web components, integrating REST API and WebSocket server communications.',
+        skills: ['React', 'Redux', 'Websocket', 'Rest', 'MicroFrontend', 'Typescript']
+      },
+      {
+        description:
+          'Led the development of a Python script editor single-page application with React TypeScript, leveraging WebSocket messages for real-time communication with the backend script execution environment.',
         skills: ['React', 'Redux', 'Websocket', 'Typescript', 'Rest']
       },
       {
         description:
-          'Develop Analytic Robot single page application with React and other frontend libraries such as react router, redux toolkits, react query etc.',
+          'Crafted an Analytic Robot single-page application with React, incorporating various frontend libraries such as React Router, Redux Toolkits, and React Query.',
         skills: ['React', 'ReactRouter', 'Redux', 'ReactQuery', 'Javascript', 'Rest']
       },
       {
         description:
-          'Make sure features are properly covered by unit tests with react testing library and jest tests, and end-to-end level tests in cypress',
-        skills: ['React', 'ReactTestingLibrary', 'Jest', 'Cypress']
+          'Ensured comprehensive coverage of features through meticulous unit testing with React Testing Library and Jest, along with end-to-end testing using Cypress.',
+        skills: ['React', 'ReactTestingLibrary', 'Jest', 'Cypress', 'Javascript']
       },
       {
         description:
-          'Collaborate with UX designer and product manager to gather requirements and provide feedback on user stories.',
+          'Collaborated closely with UX designers and product managers, gathering requirements and providing constructive feedback on user stories.',
         skills: ['Collaboration']
       },
       {
         description:
-          'Develop and design front-end data visualization and storyboard AngularJS single page application.',
-        skills: ['Angular', 'GraphQL', 'DataVisualization']
+          'Designed and developed front-end data visualization and storyboard for an AngularJS single-page application.',
+        skills: ['Angular', 'GraphQL', 'DataVisualization', 'Javascript']
       },
       {
         description:
-          'Migrate and transit front-end application component to use React, in both custom components and platform-wide common component library.',
-        skills: ['Angular', 'React']
+          'Orchestrated the migration of frontend application components to React, both in custom components and within a platform-wide common component library.',
+        skills: ['Angular', 'React', 'Javascript']
       },
       {
-        description: 'Implement backend endpoints in ruby-on-rails application when needed.',
+        description:
+          'Implemented backend endpoints within a Ruby-on-Rails application when required.',
         skills: ['Rails']
       },
       {
         description:
-          'Write test code to cover features, and maintain a healthy test pyramid to provide product stability.',
+          'Wrote and maintained test code to cover features, establishing a robust test pyramid to ensure product stability.',
         skills: ['Jest', 'Cypress', 'Enzyme', 'Storybook', 'Screener']
       },
       {
         description:
-          'Develop single page application for the Audit Analytic product using AngularJS on frontend, and Jersey and Hibernate on backend api.',
-        skills: ['Angular', 'Java', 'Jersey', 'Hibernate']
+          'Developed a single-page application for the Audit Analytic product using AngularJS on the frontend and Jersey and Hibernate on the backend API.',
+        skills: ['Angular', 'Java', 'Jersey', 'Hibernate', 'Javascript']
       },
       {
         description:
-          'Provide mentoring and guidance to junior engineers, and assist team members on complex problems.',
+          'Offered mentorship and guidance to junior engineers, actively assisting team members in solving complex problems.',
         skills: ['Mentoring']
       }
     ]
@@ -69,13 +75,18 @@ const workExperiencesData: WorkExperience[] = [
     achievements: [
       {
         description:
-          'Develop new features and enhance existing features for credit unions’ online banking sites, which uses Java and SQL Server 2005.',
+          'Developed new features and improvements for online banking sites tailored for credit unions, leveraging Java and SQL Server 2005 technologies.',
         skills: ['Java', 'Sql']
       },
       {
         description:
-          'Support the web banking product, and resolve production incidents in a timely manner.',
+          'Played a pivotal role in supporting and maintaining the web banking product, promptly resolving production incidents to ensure uninterrupted service.',
         skills: ['Support', 'ProblemSolving']
+      },
+      {
+        description:
+          'Collaborated closely with client support and business analysts, ensuring a thorough understanding of incidents and project requirements to facilitate effective problem resolution and project delivery.',
+        skills: ['Support', 'Collaboration']
       }
     ]
   }
