@@ -1,1 +1,10 @@
-export { Frontend, Backend, Language, Api, SoftSkill, SkillCategory, SkillsMap } from './skills'
+export {
+  Frontend,
+  Backend,
+  Test,
+  Language,
+  Api,
+  SoftSkill,
+  SkillCategory,
+  SkillsMap
+} from './skills'

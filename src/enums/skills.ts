@@ -1,24 +1,18 @@
 export enum Frontend {
   Angular = 'Angular',
-  ASP = 'ASP',
-  Cypress = 'Cypress',
   DataVisualization = 'DataVisualization',
-  Enzyme = 'Enzyme',
-  Jest = 'Jest',
   MicroFrontend = 'MicroFrontend',
   Pinia = 'Pinia',
   React = 'React',
   ReactQuery = 'ReactQuery',
   ReactRouter = 'ReactRouter',
-  ReactTestingLibrary = 'ReactTestingLibrary',
   Redux = 'Redux',
-  Screener = 'Screener',
-  Storybook = 'Storybook',
   Vue = 'Vue',
   Vuetify = 'Vuetify'
 }
 
 export enum Backend {
+  ASP = 'ASP',
   Express = 'Express',
   Hibernate = 'Hibernate',
   Jersey = 'Jersey',
@@ -34,6 +28,15 @@ export enum Language {
   Javascript = 'Javascript',
   Typescript = 'Typescript',
   VB = 'VB'
+}
+
+export enum Test {
+  Cypress = 'Cypress',
+  Enzyme = 'Enzyme',
+  Jest = 'Jest',
+  ReactTestingLibrary = 'ReactTestingLibrary',
+  Screener = 'Screener',
+  Storybook = 'Storybook'
 }
 
 export enum Api {
@@ -52,6 +55,7 @@ export enum SoftSkill {
 export enum SkillCategory {
   Frontend = 'Frontend',
   Backend = 'Backend',
+  Test = 'Test',
   Api = 'Api',
   Language = 'Language',
   SoftSkill = 'SoftSkill'
@@ -60,6 +64,7 @@ export enum SkillCategory {
 export const SkillsMap = {
   Frontend,
   Backend,
+  Test,
   Language,
   Api,
   SoftSkill
