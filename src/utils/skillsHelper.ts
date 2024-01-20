@@ -4,9 +4,12 @@ import { Frontend, Backend, Language, Api, SoftSkill } from '@/enums'
 export const getSkillDisplayName = (skill: AllSkills): string => {
   const displayNamesMap = new Map<AllSkills, string>([
     [Frontend.Angular, 'Angular'],
+    [Frontend.ASP, 'ASP'],
     [Frontend.Cypress, 'Cypress'],
+    [Frontend.DataVisualization, 'Data Visualization'],
     [Frontend.Enzyme, 'Enzyme'],
     [Frontend.Jest, 'Jest'],
+    [Frontend.MicroFrontend, 'Micro Frontend'],
     [Frontend.Pinia, 'Pinia'],
     [Frontend.React, 'React'],
     [Frontend.ReactQuery, 'React Query'],
@@ -15,10 +18,8 @@ export const getSkillDisplayName = (skill: AllSkills): string => {
     [Frontend.Redux, 'Redux'],
     [Frontend.Screener, 'Screener'],
     [Frontend.Storybook, 'Storybook'],
-    [Frontend.MicroFrontend, 'Micro Frontend'],
     [Frontend.Vue, 'Vue'],
     [Frontend.Vuetify, 'Vuetify'],
-    [Frontend.DataVisualization, 'Data Visualization'],
 
     [Backend.Express, 'Express'],
     [Backend.Hibernate, 'Hibernate'],
@@ -31,6 +32,7 @@ export const getSkillDisplayName = (skill: AllSkills): string => {
     [Language.Java, 'Java'],
     [Language.Javascript, 'Javascript'],
     [Language.Typescript, 'Typescript'],
+    [Language.VB, 'Visual Basic'],
 
     [Api.Rest, 'REST'],
     [Api.Websocket, 'Websocket'],

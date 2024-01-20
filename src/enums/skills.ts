@@ -1,56 +1,58 @@
 export enum Frontend {
   Angular = 'Angular',
+  ASP = 'ASP',
   Cypress = 'Cypress',
-  Jest = 'Jest',
+  DataVisualization = 'DataVisualization',
   Enzyme = 'Enzyme',
+  Jest = 'Jest',
+  MicroFrontend = 'MicroFrontend',
   Pinia = 'Pinia',
   React = 'React',
   ReactQuery = 'ReactQuery',
   ReactRouter = 'ReactRouter',
-  MicroFrontend = 'MicroFrontend',
   ReactTestingLibrary = 'ReactTestingLibrary',
   Redux = 'Redux',
-  Storybook = 'Storybook',
   Screener = 'Screener',
+  Storybook = 'Storybook',
   Vue = 'Vue',
-  Vuetify = 'Vuetify',
-  DataVisualization = 'DataVisualization'
+  Vuetify = 'Vuetify'
 }
 
 export enum Backend {
   Express = 'Express',
+  Hibernate = 'Hibernate',
+  Jersey = 'Jersey',
   MongoDb = 'MongoDb',
   Mongoose = 'Mongoose',
   Rails = 'Rails',
-  Sql = 'Sql',
-  Jersey = 'Jersey',
-  Hibernate = 'Hibernate'
+  Sql = 'Sql'
 }
 
 export enum Language {
   Java = 'Java',
   Javascript = 'Javascript',
-  Typescript = 'Typescript'
+  Typescript = 'Typescript',
+  VB = 'VB'
 }
 
 export enum Api {
+  GraphQL = 'GraphQL',
   Rest = 'Rest',
-  Websocket = 'Websocket',
-  GraphQL = 'GraphQL'
+  Websocket = 'Websocket'
 }
 
 export enum SoftSkill {
   Collaboration = 'Collaboration',
+  Mentoring = 'Mentoring',
   ProblemSolving = 'ProblemSolving',
-  Support = 'Support',
-  Mentoring = 'Mentoring'
+  Support = 'Support'
 }
 
 export enum SkillCategory {
-  Frontend = 'Frontend',
-  Backend = 'Backend',
-  Language = 'Language',
   Api = 'Api',
+  Backend = 'Backend',
+  Frontend = 'Frontend',
+  Language = 'Language',
   SoftSkill = 'SoftSkill'
 }
 

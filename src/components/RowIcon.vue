@@ -12,8 +12,9 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from 'vue'
-import diligentImg from '@/assets/companyLogos/diligent.png'
 import central1Img from '@/assets/companyLogos/central1.png'
+import diligentImg from '@/assets/companyLogos/diligent.png'
+import liFungImg from '@/assets/companyLogos/lifung.png'
 import meanjsImg from '@/assets/logoIcons/meanjs.png'
 import vueSvg from '@/assets/logoIcons/vue.svg'
 import { mdiBriefcaseVariantOutline } from '@mdi/js'
@@ -22,6 +23,7 @@ const { iconKey } = defineProps({ iconKey: String })
 const imgMap: Record<string, any> = {
   central1: central1Img,
   diligent: diligentImg,
+  lifung: liFungImg,
   meanjs: meanjsImg,
   vue: vueSvg
 }

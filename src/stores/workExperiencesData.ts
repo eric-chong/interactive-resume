@@ -89,6 +89,26 @@ const workExperiencesData: WorkExperience[] = [
         skills: ['Support', 'Collaboration']
       }
     ]
+  },
+  {
+    company: 'Li & Fung (Trading) Ltd',
+    location: 'Hong Kong',
+    icon: 'lifung',
+    position: 'Software Developer',
+    start: '2005 Nov',
+    end: '2007 May',
+    achievements: [
+      {
+        description:
+          'Enhanced the functionality of a web-based application dedicated to export trading and supply chain management, developed using ASP and MS SQL Server 2000.',
+        skills: ['ASP', 'Sql']
+      },
+      {
+        description:
+          'Provided robust support for and made enhancements to MS SQL Server 2000 DTS (Data Transformation Services), facilitating seamless data transfer between Oracle core database and MS SQL Server database.',
+        skills: ['VB', 'Sql']
+      }
+    ]
   }
 ]
 
