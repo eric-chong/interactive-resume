@@ -50,9 +50,9 @@ export enum SoftSkill {
 }
 
 export enum SkillCategory {
-  Api = 'Api',
-  Backend = 'Backend',
   Frontend = 'Frontend',
+  Backend = 'Backend',
+  Api = 'Api',
   Language = 'Language',
   SoftSkill = 'SoftSkill'
 }
