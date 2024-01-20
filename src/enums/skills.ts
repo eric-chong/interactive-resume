@@ -29,6 +29,7 @@ export enum Backend {
 }
 
 export enum Language {
+  CT = 'CT',
   Java = 'Java',
   Javascript = 'Javascript',
   Typescript = 'Typescript',

@@ -29,6 +29,7 @@ export const getSkillDisplayName = (skill: AllSkills): string => {
     [Backend.Rails, 'Ruby on Rails'],
     [Backend.Sql, 'SQL'],
 
+    [Language.CT, 'Consumer Transaction'],
     [Language.Java, 'Java'],
     [Language.Javascript, 'Javascript'],
     [Language.Typescript, 'Typescript'],

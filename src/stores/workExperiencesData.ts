@@ -109,6 +109,45 @@ const workExperiencesData: WorkExperience[] = [
         skills: ['VB', 'Sql']
       }
     ]
+  },
+  {
+    company: 'IBM Hong Kong Ltd',
+    location: 'Hong Kong',
+    icon: 'ibm',
+    position: 'IT Specialist',
+    start: '2004 Oct',
+    end: '2005 Oct',
+    achievements: [
+      {
+        description:
+          'Enhanced the capabilities of the teller system at DBS Bank, utilizing CT (Consumer Transaction) and OS2 as the development language and platform.',
+        skills: ['CT', 'Java']
+      },
+      {
+        description:
+          "Held the responsibility for daily support and proactive investigation into production problems, ensuring the system's smooth operation and addressing any issues promptly.",
+        skills: ['Support', 'ProblemSolving']
+      }
+    ]
+  },
+  {
+    company: 'Innovision Technologies',
+    location: 'Hong Kong',
+    position: 'System Programmer',
+    start: '2003 Jul',
+    end: '2004 Oct',
+    achievements: [
+      {
+        description:
+          'Developed and designed a robust web-based Warehouse Management System using ASP and SQL Server 2000, ensuring efficient and streamlined warehouse operations.',
+        skills: ['ASP', 'Sql']
+      },
+      {
+        description:
+          "Conducted a comprehensive analysis of an existing accounting system developed by a third party, meticulously crafting detailed database documentation and specifications in alignment with the system's requirements.",
+        skills: ['Sql']
+      }
+    ]
   }
 ]
 

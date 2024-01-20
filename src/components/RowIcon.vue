@@ -14,6 +14,7 @@
 import { computed, defineProps } from 'vue'
 import central1Img from '@/assets/companyLogos/central1.png'
 import diligentImg from '@/assets/companyLogos/diligent.png'
+import ibmSvg from '@/assets/companyLogos/ibm.svg'
 import liFungImg from '@/assets/companyLogos/lifung.png'
 import meanjsImg from '@/assets/logoIcons/meanjs.png'
 import vueSvg from '@/assets/logoIcons/vue.svg'
@@ -25,6 +26,7 @@ const imgMap: Record<string, any> = {
   diligent: diligentImg,
   lifung: liFungImg,
   meanjs: meanjsImg,
+  ibm: ibmSvg,
   vue: vueSvg
 }
 const iconImg = computed(() => (iconKey ? imgMap[iconKey] : null))
