@@ -112,6 +112,7 @@ $logo-height: 50px;
 .info-row__details--subtitle-text {
   font-size: 14px;
   font-style: italic;
+  max-width: 550px;
 }
 .info-row__details--period {
   font-size: 13px;
