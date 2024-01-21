@@ -1,5 +1,5 @@
 <template>
-  <div class="info-row">
+  <div class="info-row" ref="container" :class="{ expanded: isExpanded }">
     <div class="info-row__icon">
       <slot name="icon"></slot>
     </div>
@@ -8,7 +8,13 @@
       :class="{
         highlighted: isRowHighlighted
       }"
+      ref="content"
     >
+      <div>scroll height: {{ container?.scrollHeight }}</div>
+      <div>client height: {{ container?.clientHeight }}</div>
+      <div>isContentOverflow: {{ isContentOverflow }}</div>
+      <div>isExpanded: {{ isExpanded }}</div>
+
       <h3 class="info-row__details--title"><slot name="title"></slot></h3>
       <div class="info-row__details--subtitle">
         <div class="info-row__details--subtitle-text"><slot name="subtitle"></slot></div>
@@ -27,14 +33,30 @@
           {{ item.description }}
         </li>
       </ul>
+
+      <div class="info-row__overflow-toggle-button--container" v-if="isContentOverflow">
+        <v-btn
+          class="info-row__overflow-toggle-button"
+          density="compact"
+          variant="outlined"
+          size="small"
+          @click="isExpanded = !isExpanded"
+        >
+          {{ isExpanded ? 'Show less' : 'Show more' }}
+        </v-btn>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, onMounted, ref } from 'vue'
 import { useExperiencesStore } from '@/stores/useExperiencesStore'
 import type { Achievement } from '@/types'
+
+const container = ref<HTMLDivElement | null>(null)
+const isContentOverflow = ref(false)
+const isExpanded = ref(false)
 
 const { listItems, isRowHighlighted } = defineProps({
   listItems: Array<Achievement>,
@@ -56,6 +78,12 @@ function isItemMuted(achievement: Achievement) {
   const isHighlighted = isItemHighlighted(achievement)
   return highlightSkills.length > 0 && !isHighlighted
 }
+
+onMounted(() => {
+  const scrollHeight = container.value?.scrollHeight || 0
+  const clientHeight = container.value?.clientHeight || 0
+  isContentOverflow.value = scrollHeight > clientHeight
+})
 </script>
 
 <style scoped lang="scss">
@@ -64,6 +92,15 @@ function isItemMuted(achievement: Achievement) {
   position: relative;
   margin-top: 0;
   padding: 15px 20px 15px 90px;
+  max-height: 500px;
+  overflow: hidden;
+  // transition: max-height 0.5s cubic-bezier(0.82, 0.085, 0.395, 0.895);
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+  &.expanded {
+    max-height: inherit;
+    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+  }
 }
 
 $logo-top-position: 15px;
@@ -102,6 +139,9 @@ $logo-height: 50px;
 .info-row:last-of-type:after {
   display: none;
 }
+.info-row__details {
+  position: relative;
+}
 .info-row__details.highlighted {
   color: rgb(var(--v-theme-primary));
 }
@@ -138,5 +178,14 @@ $logo-height: 50px;
   margin-top: 16px;
   margin-left: 16px;
   font-size: 14px;
+}
+.info-row__overflow-toggle-button--container {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  backdrop-filter: blur(3px);
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
 }
 </style>
