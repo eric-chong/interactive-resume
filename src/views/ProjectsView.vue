@@ -1,17 +1,9 @@
 <template>
-  <div class="projects-view">
-    <DrawerPanel />
-    <PersonalProjects />
-  </div>
+  <PersonalProjects />
 </template>
 
 <script setup lang="ts">
 import PersonalProjects from '@/components/PersonalProjects.vue'
-import DrawerPanel from '@/components/DrawerPanel.vue'
 </script>
 
-<style scoped lang="scss">
-.projects-view {
-  position: relative;
-}
-</style>
+<style scoped lang="scss"></style>
