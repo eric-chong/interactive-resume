@@ -27,7 +27,7 @@
             @update:model-value="themeChange"
           />
         </div>
-        <a href="https://www.linkedin.com/in/eric-hc-chong/" target="_blank">
+        <a href="https://github.com/eric-chong" target="_blank">
           <v-icon :icon="mdiGithub" />
         </a>
         <a href="https://www.linkedin.com/in/eric-hc-chong/" target="_blank">
