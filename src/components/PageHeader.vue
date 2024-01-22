@@ -57,8 +57,8 @@ const logoHover = ref(false)
 const theme = useTheme()
 const currentTheme = ref('dark')
 
-function themeChange(themeValue: string) {
-  theme.global.name.value = themeValue
+function themeChange(themeValue: string | null) {
+  theme.global.name.value = themeValue || 'dark'
 }
 </script>
 
