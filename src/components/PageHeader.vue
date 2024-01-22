@@ -14,6 +14,19 @@
     </div>
     <div class="page-header__overview">
       <div class="page-header__overview--links">
+        <div class="theme-switch">
+          <v-switch
+            v-model="currentTheme"
+            density="compact"
+            true-value="dark"
+            false-value="light"
+            color="primary"
+            :true-icon="mdiDarkTheme"
+            :false-icon="mdiLightTheme"
+            hide-details
+            @update:model-value="themeChange"
+          />
+        </div>
         <a href="https://www.linkedin.com/in/eric-hc-chong/" target="_blank">
           <v-icon :icon="mdiGithub" />
         </a>
@@ -31,9 +44,22 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { mdiGithub, mdiLinkedin } from '@mdi/js'
+import { useTheme } from 'vuetify'
+import {
+  mdiGithub,
+  mdiLinkedin,
+  mdiWeatherNight as mdiDarkTheme,
+  mdiWeatherSunny as mdiLightTheme
+} from '@mdi/js'
 
 const logoHover = ref(false)
+
+const theme = useTheme()
+const currentTheme = ref('dark')
+
+function themeChange(themeValue: string) {
+  theme.global.name.value = themeValue
+}
 </script>
 
 <style lang="scss" scoped>
@@ -91,5 +117,16 @@ const logoHover = ref(false)
 .page-header__overview--links {
   text-align: right;
   font-size: 14px;
+}
+.page-header__overview--links {
+  display: flex;
+  justify-content: right;
+  .theme-switch {
+    margin-right: 16px;
+  }
+  a {
+    position: relative;
+    top: 4px;
+  }
 }
 </style>
