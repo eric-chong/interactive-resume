@@ -10,42 +10,42 @@ const workExperiencesData: WorkExperience[] = [
     achievements: [
       {
         description:
-          'Spearheaded the research and implementation of micro frontend architecture for an AI chat assistant component utilizing React and web components, integrating REST API and WebSocket server communications.',
+          'Spearheaded the implementation of modular, scalable micro frontend architecture for an AI chat assistant using React, web components, and integrated REST API and WebSocket server communications.',
         skills: ['React', 'Redux', 'Websocket', 'Rest', 'MicroFrontend', 'Typescript']
       },
       {
         description:
-          'Led the development of a Python script editor single-page application with React TypeScript, leveraging WebSocket messages for real-time communication with the backend script execution environment.',
+          'Led the development of a real-time Python script editor SPA with React and TypeScript, utilizing WebSocket messages for live communication with backend script execution environments, improving developer productivity.',
         skills: ['React', 'Redux', 'Websocket', 'Typescript', 'Rest']
       },
       {
         description:
-          'Crafted an Analytic Robot single-page application with React, incorporating various frontend libraries such as React Router, Redux Toolkits, and React Query.',
+          'Designed and built a data-driven Analytic Robot SPA with React, utilizing React Router, Redux Toolkits, and React Query to handle large datasets and optimize performance.',
         skills: ['React', 'ReactRouter', 'Redux', 'ReactQuery', 'Javascript', 'Rest']
       },
       {
         description:
-          'Ensured comprehensive coverage of features through meticulous unit testing with React Testing Library and Jest, along with end-to-end testing using Cypress.',
+          'Ensured high-quality, stable frontend applications through comprehensive unit testing with React Testing Library and Jest, along with end-to-end testing using Cypress.',
         skills: ['React', 'ReactTestingLibrary', 'Jest', 'Cypress', 'Javascript']
       },
       {
         description:
-          'Collaborated closely with UX designers and product managers, gathering requirements and providing constructive feedback on user stories.',
+          'Collaborated closely with UX designers, QA, product managers and backend developers, providing feedback on user stories and aligning technical solutions with product vision.',
         skills: ['Collaboration']
       },
       {
         description:
-          'Designed and developed front-end data visualization and storyboard for an AngularJS single-page application.',
+          'Designed and implemented front-end data visualization and dashboards for analytical applications using AngularJS.',
         skills: ['Angular', 'GraphQL', 'DataVisualization', 'Javascript']
       },
       {
         description:
-          'Orchestrated the migration of frontend application components to React, both in custom components and within a platform-wide common component library.',
+          'Orchestrated the migration of legacy AngularJS components to React, improving application maintainability and performance across multiple projects.',
         skills: ['Angular', 'React', 'Javascript']
       },
       {
         description:
-          'Implemented backend endpoints within a Ruby-on-Rails application when required.',
+          'Contributed to backend development by creating and maintaining API endpoints within a Ruby-on-Rails application when required.',
         skills: ['Rails']
       },
       {
@@ -55,7 +55,7 @@ const workExperiencesData: WorkExperience[] = [
       },
       {
         description:
-          'Developed a single-page application for the Audit Analytic product using AngularJS on the frontend and Jersey and Hibernate on the backend API.',
+          'Led the development of a SPA for the Audit Analytic product, utilizing AngularJS for frontend and Jersey and Hibernate on the backend.',
         skills: ['Angular', 'Java', 'Jersey', 'Hibernate', 'Javascript']
       },
       {
