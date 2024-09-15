@@ -2,6 +2,48 @@ import type { Project } from '@/types/Project'
 
 const projectData: Array<Project> = [
   {
+    title: 'Personal Budgets and Spending tracker',
+    icon: 'nextjs',
+    description:
+      'A personal finance management tool designed to help users track their expenses and manage budgets effectively. Built with Next.js for optimal performance, Prisma for database management, and deployed on Vercel, it offers a seamless and responsive user experience across devices. The application allows users to log expenses, categorize them, set budgets, and visualize spending patterns using interactive charts powered by MUI X-Chart. The interface follows the MUI design system, ensuring a sleek and modern look.',
+    skills: ['Nextjs', 'NextAuth', 'Prisma', 'Postgres', 'MUI', 'MUIChart', 'React', 'ReactRouter'],
+    year: '2023',
+    highlights: [
+      {
+        description: 'Expense Tracking: Log and categorize personal expenses in real time.'
+      },
+      {
+        description: 'Budget Management: Set monthly budgets and monitor spending.'
+      },
+      {
+        description:
+          'Data Visualization: Visualize spending and budgeting trends with MUI X-Chart, including tables highlighting budget items above their limits.'
+      },
+      {
+        description: 'MUI Design System: Modern, responsive UI built with the MUI design system.'
+      },
+      {
+        description:
+          'Secure Authentication: Implements NextAuth with Google OAuth for seamless and secure user login.'
+      },
+      {
+        description:
+          'Database Integration: Prisma ORM with a Postgres database ensures efficient and secure data management.'
+      },
+      {
+        description:
+          'Next.js Performance: Utilizes server-side rendering and static generation for fast and smooth performance.'
+      },
+      {
+        description:
+          'Deployment on Vercel: Scalable, cloud-based deployment with automatic CI/CD pipelines.'
+      }
+    ],
+    links: {
+      github: 'https://github.com/eric-chong/next-expense-app'
+    }
+  },
+  {
     title: 'Dynamic Portfolio',
     icon: 'vue',
     description:

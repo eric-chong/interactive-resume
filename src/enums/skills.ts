@@ -2,6 +2,9 @@ export enum Frontend {
   Angular = 'Angular',
   DataVisualization = 'DataVisualization',
   MicroFrontend = 'MicroFrontend',
+  MUI = 'MUI',
+  MUIChart = 'MUIChart',
+  Nextjs = 'Nextjs',
   Pinia = 'Pinia',
   React = 'React',
   ReactQuery = 'ReactQuery',
@@ -18,6 +21,9 @@ export enum Backend {
   Jersey = 'Jersey',
   MongoDb = 'MongoDb',
   Mongoose = 'Mongoose',
+  NextAuth = 'NextAuth',
+  Postgres = 'Postgres',
+  Prisma = 'Prisma',
   Rails = 'Rails',
   Sql = 'Sql'
 }
