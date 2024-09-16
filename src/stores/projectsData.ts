@@ -7,7 +7,7 @@ const projectData: Array<Project> = [
     description:
       'A personal finance management tool designed to help users track their expenses and manage budgets effectively. Built with Next.js for optimal performance, Prisma for database management, and deployed on Vercel, it offers a seamless and responsive user experience across devices. The application allows users to log expenses, categorize them, set budgets, and visualize spending patterns using interactive charts powered by MUI X-Chart. The interface follows the MUI design system, ensuring a sleek and modern look.',
     skills: ['Nextjs', 'NextAuth', 'Prisma', 'Postgres', 'MUI', 'MUIChart', 'React', 'ReactRouter'],
-    year: '2023',
+    year: '2024',
     highlights: [
       {
         description: 'Expense Tracking: Log and categorize personal expenses in real time.'
